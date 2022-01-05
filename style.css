@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/* Set background dividing sections start */
+#home {
+    background-color: #2b2b2b;
+}
+
+#intro {
+    background-color: aquamarine;
+}
+
+#about {
+    background-color: azure;
+}
+
+#project {
+    background-color: cadetblue;
+}
+
+#contact {
+    background-color: coral;
+}
+/* Set background dividing sections end */
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+/* Intro Section Start */
+#intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(image/intro-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    color:white;
+    text-align: center;
+    z-index: 1;
+}
+
+#intro::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .2;
+    z-index: -1;
+}
+
+h1.intro{
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+}
+
+div.container div.intro-text {
+    margin-top: 1rem;
+    display: block;
+    min-height: 60px;
+}
+
+#intro-text {
+    font-size: 42px;
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	letter-spacing: 2px;
+}
+
+#intro .cta {
+    position: block;
+    display: inline-block;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #333456;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease background-color;
+    background-color: transparent;
+}
+
+#intro .cta:hover {
+    color: #333456;
+    background-color: white;
+}
