@@ -6,11 +6,11 @@
 }
 
 #intro {
-    background-color: aquamarine;
+    background-color: #2b2b2b;
 }
 
 #about {
-    background-color: azure;
+    background-color: #dadada;
 }
 
 #project {
@@ -74,7 +74,7 @@ a {
 }
 
 h1.intro{
-    font-size: 60px;
+    font-size: 90px;
     font-weight: 500;
     position: relative;
 }
@@ -86,7 +86,7 @@ div.container div.intro-text {
 }
 
 #intro-text {
-    font-size: 42px;
+    font-size: 60px;
 	display: inline-block;
 	vertical-align: middle;
 	color: white;
@@ -101,14 +101,69 @@ div.container div.intro-text {
     padding: 10px 20px;
     background-color: white;
     border: 2px solid #333456;
-    font-size: 18px;
+    border-radius: 10px;
+    font-size: 28px;
     text-transform: uppercase;
     letter-spacing: .1rem;
     transition: .3s ease background-color;
     background-color: transparent;
+    transition-property: background-color, color;
 }
 
 #intro .cta:hover {
     color: #333456;
     background-color: white;
 }
+
+
+
+/* About Section Start */
+.about {
+    padding-top: 4rem;
+    align-items: flex-start;
+}
+.about-box {
+    padding: 5vh;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.about-box-item {
+    margin: 5px;
+    font-size: 2vw;
+    color: black;
+    text-align: left;
+    flex-basis: 500px;
+    flex-grow: 1;
+    
+}
+
+.about-item-left p {
+    margin-top: 2vh;
+}
+
+.about-item-right h1 {
+    font-size: 1.25em;
+}
+
+.about-item-right h3 {
+    font-size: 1em;
+}
+
+.about-item-right table, th, td {
+    border: 1px solid black;
+    font-size: 0.8em;
+  }
+
+.about-item-right p {
+    font-size: 0.8em;
+}
+
+/* About Section Start */
