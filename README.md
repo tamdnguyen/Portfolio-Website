@@ -16,4 +16,5 @@ In the website, you will get information about me, my resume, my projects, and m
 - [HTML Free Tutorials](https://www.w3schools.com/html/default.asp)
 
 Last update: 06.01.2022
+
 Happy Learning. Cheers!
