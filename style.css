@@ -119,8 +119,8 @@ div.container div.intro-text {
 
 /* About Section Start */
 .about {
-    padding-top: 4rem;
-    align-items: flex-start;
+    padding-top: 3rem;
+    align-items: center;
 }
 .about-box {
     padding: 5vh;
@@ -140,30 +140,88 @@ div.container div.intro-text {
     font-size: 2vw;
     color: black;
     text-align: left;
-    flex-basis: 500px;
+    flex-basis: 400px;
     flex-grow: 1;
-    
 }
 
 .about-item-left p {
     margin-top: 2vh;
 }
 
-.about-item-right h1 {
-    font-size: 1.25em;
+.about-item-right {
+    text-align: center;
 }
 
-.about-item-right h3 {
+.center-img {
+    margin-top: 3vh;
+}
+.about-item-right img {
+    height: auto;
+    width: 70%;
+    max-width: 300px;
+}
+
+.about-item-skill {
+    margin-top: 1.5rem;
+    flex: 0 0 100%;
+}
+.about-item-skill h1 {
+    font-size: 1.5em;
+}
+
+.about-item-skill table {
+    font-size: .9em;
+    margin: 0 auto;
+    margin-top: .8rem;
+}
+
+.index-column {
+    padding: .5rem 1.5rem .5rem .5rem;
+}
+
+.icon {   
+    height: .9em;
+    width: .9em;
+    display: inline-block;
+}
+
+.numpy {
+    background: url('image/numpy-icon.svg');
+    background-size: .9em;
+    background-repeat: no-repeat;
+}
+
+.pandas {
+    background: url("image/pandas_mark.svg");
+    background-size: .9em;
+    background-repeat: no-repeat;
+}
+
+.about-item-resume {
+    padding: 1rem;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resume-about {
+    color: #333456;
+    background-color: white;
+    padding: .2em .4em;
+    background-color: white;
+    border: .15em solid #333456;
+    border-radius: .3em;
     font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .3s ease background-color;
+    background-color: transparent;
+    transition-property: background-color, color;
 }
 
-.about-item-right table, th, td {
-    border: 1px solid black;
-    font-size: 0.8em;
-  }
-
-.about-item-right p {
-    font-size: 0.8em;
+.resume-about:hover {
+    color: white;
+    background-color: #333456;
 }
 
-/* About Section Start */
+/* About Section End */
