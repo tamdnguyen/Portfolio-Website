@@ -14,7 +14,8 @@ In the website, you will get information about me, my resume, my projects, and m
 ## Helpful Learning Material
 - [CSS Zero to Hero Complete Course](https://www.youtube.com/watch?v=1Rs2ND1ryYc&t=2848s)
 - [HTML Free Tutorials](https://www.w3schools.com/html/default.asp)
+- [How to host website on Github (for free!)](https://pages.github.com/)
 
-Last update: 06.01.2022
+Last update: 20.01.2022
 
 Happy Learning. Cheers!
