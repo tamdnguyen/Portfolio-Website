@@ -29,7 +29,7 @@ a {
 
 /* Navbar Section Start */
 .header {
-    background-color: #424544;
+    background-color: black;
 }
 
 header {
@@ -144,6 +144,15 @@ div.container div.intro-text {
 
 
 /* About Section Start */
+.about-title {
+    padding-top: 6.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+}
+
 .about {
     padding-top: 3rem;
     align-items: center;
@@ -178,7 +187,7 @@ div.container div.intro-text {
     flex-wrap: nowrap;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     .intro-pic {
         flex-wrap: wrap;
     }
@@ -201,7 +210,7 @@ div.container div.intro-text {
     width: 350px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .about-item-right img {
         height: auto;
         width: 150px;
@@ -232,16 +241,28 @@ div.container div.intro-text {
     display: inline-block;
 }
 
+.fab:hover{
+    cursor: pointer;
+}
+
 .numpy {
     background: url('image/numpy-icon.svg');
     background-size: .9em;
     background-repeat: no-repeat;
 }
 
+.numpy:hover{
+    cursor: pointer;
+}
+
 .pandas {
     background: url("image/pandas_mark.svg");
     background-size: .9em;
     background-repeat: no-repeat;
+}
+
+.pandas:hover {
+    cursor: pointer;
 }
 
 .about-item-resume {
@@ -276,20 +297,99 @@ div.container div.intro-text {
 
 
 /* Project Section Start */
+.project-title {
+    padding-top: 6.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+}
+
+.project-title p {
+    font-size: 0.8em;
+}
+
 .project-container {
+    margin: 5%;
     min-height: 100vh;
-	width: 100%;
     padding: 0% 10%;
     display: grid;
-    gap: 20px;
-    align-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     justify-content: space-evenly;
+    gap: 1.5em;
+    grid-template-areas: 
+        "project1 project2" 
+        "project3 project3";
 }
 
 .project-item {
-    width: 30%;
-    height: 300px;
-    background-color: chocolate;
-    text-align: center;
+    display: grid;
+    grid-template-rows: 0.7fr 0.3fr;
+    grid-template-areas: "image" "description";
 }
+
+.project-1 {
+    grid-area: project1;
+}
+
+.project-2 {
+    grid-area: project2;
+}
+
+.project-3 {
+    grid-area: project3;
+}
+
+.project-text {
+    grid-area: description;
+    background-color: white;
+}
+
+.image-holder {
+    grid-area: image;
+    overflow: hidden;
+}
+
+.project-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(image/intro-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.project-image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .2;
+    z-index: -1;
+}
+
+.project-image:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.project-1 .image-holder .project-image {
+    background-image: url(image/project1.png);
+}
+
+.project-2 .image-holder .project-image {
+    background-image: url(image/project2.png);
+}
+
+.project-3 .image-holder .project-image {
+    background-image: url(image/project3.png);
+}
+
