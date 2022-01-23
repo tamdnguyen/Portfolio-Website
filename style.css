@@ -29,7 +29,8 @@ a {
 
 /* Navbar Section Start */
 .header {
-    background-color: black;
+    background-color: transparent;
+    transition: background-color 0.3s;
 }
 
 header {
@@ -39,6 +40,7 @@ header {
     left: 0;
     z-index: 2;
 }
+
 
 .navbar-content {
     display: flex;
@@ -70,6 +72,14 @@ header {
 .navbar-page-content li a:hover {
     color: rgb(159, 202, 202);
     transform: scale(1.1);
+}
+
+nav.change-color {
+    background-color: white;
+}
+
+nav.change-color a{
+    color: black;
 }
 /* Navbar Section End */
 
