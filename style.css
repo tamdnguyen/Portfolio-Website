@@ -136,7 +136,7 @@ div.container div.intro-text {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: white;
-    border: 2px solid #333456;
+    border: 0.1em solid #333456;
     border-radius: 10px;
     font-size: 28px;
     text-transform: uppercase;
@@ -197,7 +197,7 @@ div.container div.intro-text {
     flex-wrap: nowrap;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .intro-pic {
         flex-wrap: wrap;
     }
@@ -220,10 +220,10 @@ div.container div.intro-text {
     width: 350px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .about-item-right img {
         height: auto;
-        width: 150px;
+        width: 200px;
     }
 }
 
@@ -307,6 +307,9 @@ div.container div.intro-text {
 
 
 /* Project Section Start */
+#project {
+    min-height: 100vh;
+}
 .project-title {
     padding-top: 6.5%;
     display: flex;
@@ -320,45 +323,39 @@ div.container div.intro-text {
     font-size: 0.8em;
 }
 
-.project-container {
-    margin: 5%;
-    min-height: 100vh;
-    padding: 0% 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-evenly;
-    gap: 1.5em;
-    grid-template-areas: 
-        "project1 project2" 
-        "project3 project3";
+.project-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-box .project-container {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .project-item {
-    display: grid;
-    grid-template-rows: 0.7fr 0.3fr;
-    grid-template-areas: "image" "description";
+    height: 510px;
+    width: 450px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
 }
 
-.project-1 {
-    grid-area: project1;
-}
+.project-item:hover{
 
-.project-2 {
-    grid-area: project2;
-}
-
-.project-3 {
-    grid-area: project3;
-}
-
-.project-text {
-    grid-area: description;
-    background-color: white;
 }
 
 .image-holder {
-    grid-area: image;
+    height: 275px;
     overflow: hidden;
+    border-radius: 20px 20px 0 0;
 }
 
 .project-image {
@@ -401,5 +398,60 @@ div.container div.intro-text {
 
 .project-3 .image-holder .project-image {
     background-image: url(image/project3.png);
+} 
+
+.project-text {
+    height: 235px;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: white;
 }
 
+.project-description {
+    height: 175px;
+    overflow: hidden;
+}
+
+.project-text ul {
+    list-style-position: inside;
+    list-style-type: none;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.project-text li {
+    margin: 0px 0px 10px 5px;
+    padding-left: 5px;
+    border-left: 0.15em solid #333456;
+}
+
+.project-link {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-link a {
+    color: #333456;
+    padding: 5px 20px;
+    background-color: white;
+    border: 0.1em solid #333456;
+    border-radius: 10px;
+    letter-spacing: .1rem;
+    transition: .3s ease background-color;
+    background-color: transparent;
+    transition-property: background-color, color;
+}
+
+.project-link a:hover{
+    color: white;
+    background-color: #333456;
+}
+/* Project Section End */
+
+/* Button Animation Start */
+.button-click:active {
+    transform: translate3d(0, 5%, 0);
+}
