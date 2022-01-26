@@ -26,6 +26,47 @@ a {
 }
 
 
+/* Scroll Bar Customize Start */
+::-webkit-scrollbar {
+    width: 8px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #565775;
+}
+
+::-webkit-scrollbar:hover {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+body{
+    overflow-y:hidden;
+    padding-right:12px;
+}
+body:hover{
+    overflow-y:scroll;
+    padding-right:0px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/* Scroll Bar Customize End */
+
 
 /* Navbar Section Start */
 .header {
@@ -41,9 +82,9 @@ header {
     z-index: 2;
 }
 
-
 .navbar-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 3%;
@@ -74,12 +115,60 @@ header {
     transform: scale(1.1);
 }
 
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease 0s;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+#hamburger:hover{
+    color: rgb(159, 202, 202);
+    transform: scale(1.2);
+}
+
 nav.change-color {
     background-color: white;
 }
 
 nav.change-color a{
     color: black;
+}
+nav.change-color .hamburger{
+    color: black;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar-page-content {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-page-content.show {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .navbar-page-content.show li{
+        margin: 5px;
+    }
+
+    #intro.show {
+        filter: blur(10px);
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 /* Navbar Section End */
 
@@ -451,7 +540,10 @@ div.container div.intro-text {
 }
 /* Project Section End */
 
+
+
 /* Button Animation Start */
 .button-click:active {
     transform: translate3d(0, 5%, 0);
 }
+/* Button Animation End */
