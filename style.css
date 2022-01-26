@@ -26,47 +26,6 @@ a {
 }
 
 
-/* Scroll Bar Customize Start */
-::-webkit-scrollbar {
-    width: 8px;
-    display: none;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #565775;
-}
-
-::-webkit-scrollbar:hover {
-    display: block;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-body{
-    overflow-y:hidden;
-    padding-right:12px;
-}
-body:hover{
-    overflow-y:scroll;
-    padding-right:0px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(255,0,0,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-/* Scroll Bar Customize End */
-
 
 /* Navbar Section Start */
 .header {
@@ -163,7 +122,35 @@ nav.change-color .hamburger{
     }
 
     #intro.show {
-        filter: blur(10px);
+        filter: blur(15px);
+    }
+
+    #about.show {
+        filter: blur(15px);
+    }
+
+    #project.show {
+        filter: blur(15px);
+    }
+
+    #nav.show{
+        background: transparent;
+    }
+
+    #nav.show .navbar-content a{
+        color: white;
+    }
+
+    #nav.show .navbar-content button{
+        color: white;
+    }
+
+    #nav.show .navbar-content a:hover{
+        color: rgb(159, 202, 202);
+    }
+
+    #nav.show .navbar-content button:hover{
+        color: rgb(159, 202, 202);
     }
 
     .hamburger {
