@@ -28,20 +28,26 @@ a {
 
 
 /* Navbar Section Start */
-.header {
-    background-color: transparent;
-    transition: background-color 0.3s;
-}
-
 header {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: 2;
 }
 
+.header {
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.header.nav-header{
+    width: 100%;
+}
+
 .navbar-content {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -397,6 +403,7 @@ div.container div.intro-text {
 
 .project-title p {
     font-size: 0.8em;
+    text-align: center;
 }
 
 .project-box {
@@ -415,8 +422,8 @@ div.container div.intro-text {
 }
 
 .project-item {
-    height: 510px;
-    width: 450px;
+    height: 550px;
+    width: 400px;
     margin: 20px;
     border-radius: 20px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
@@ -477,7 +484,7 @@ div.container div.intro-text {
 } 
 
 .project-text {
-    height: 235px;
+    height: 275px;
     border-radius: 0 0 20px 20px;
     padding: 10px;
     overflow: hidden;
@@ -504,6 +511,7 @@ div.container div.intro-text {
 
 .project-link {
     height: 50px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -524,6 +532,12 @@ div.container div.intro-text {
 .project-link a:hover{
     color: white;
     background-color: #333456;
+}
+
+@media screen and (max-width: 450px) {
+    .project-item {
+        width: 300px;
+    }
 }
 /* Project Section End */
 
