@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resume.css">
-    <title>Duc Tam Nguyen</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://kit.fontawesome.com/23f594214d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/resume.css">
+    <title>Tam's Resume</title>
 </head>
 <body>
     <!--/ Header Start /-->
     <header id="home">
         <div class="header">
-            <nav class="header-nav">
+            <nav class="header-nav" id="nav">
                 <div class="navbar-content">
                     <a class="navbar-homepage" href="index.html#home" target="_blank">DUC TAM NGUYEN</a>
-                    <ul class="navbar-page-content">
+                    <button class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="navbar-page-content" id="navbar-page-content">
                         <li class="nav-item">
                             <a class="nav-item-icon" href="index.html#home" target="_blank">Home</a>
                         </li>
@@ -38,11 +43,14 @@
     <!--/ Header End /-->
 
     <!--/ RESUME Start /-->
-    <section class="resume-container">
+    <section id="resume" class="resume-container">
         <iframe src="Resume.pdf" width="100%" height="1100" type="button" class="resume-about">
             Resume
         </iframe>
+
     </section>
     <!--/ RESUME End /-->
+
+    <script type="text/javascript" src="js/hamburger_resume.js"></script>
 </body>
 </html>

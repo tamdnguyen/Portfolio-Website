@@ -3,7 +3,7 @@ const navUL = document.getElementById("navbar-page-content");
 const intro = document.getElementById("intro");
 const about = document.getElementById("about");
 const project = document.getElementById("project");
-const nav = document.getElementById("nav")
+const nav = document.getElementById("nav");
 
 hamburger.addEventListener('click', () => {
     navUL.classList.toggle('show');

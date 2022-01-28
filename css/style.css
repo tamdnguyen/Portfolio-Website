@@ -10,7 +10,7 @@ html {
     font-size: 24px;
     font-family: 'Rubik', sans-serif;
     scroll-behavior: smooth;
-    background-color: #dadada;
+    background-image: linear-gradient(135deg,#f3f3f3,#c3cfe2);
 }
 
 a {
@@ -169,7 +169,7 @@ nav.change-color .hamburger{
 
 /* Intro Section Start */
 #intro {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(image/intro-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(../image/intro-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -307,6 +307,7 @@ div.container div.intro-text {
         height: auto;
         width: 200px;
     }
+    .about-box-item {}
 }
 
 .about-item-skill {
@@ -338,7 +339,7 @@ div.container div.intro-text {
 }
 
 .numpy {
-    background: url('image/numpy-icon.svg');
+    background: url('../image/numpy-icon.svg');
     background-size: .9em;
     background-repeat: no-repeat;
 }
@@ -348,7 +349,7 @@ div.container div.intro-text {
 }
 
 .pandas {
-    background: url("image/pandas_mark.svg");
+    background: url("../image/pandas_mark.svg");
     background-size: .9em;
     background-repeat: no-repeat;
 }
@@ -384,6 +385,18 @@ div.container div.intro-text {
     background-color: #333456;
 }
 
+@media screen and (max-width: 400px) {
+    .about-box-item {
+        font-size: 3.5vw;
+    }
+
+    .about-box-item h1 {
+        font-size: .9rem;
+    }
+    .about-box-item.about-item-skill table{
+        font-size: 3.5vw;
+    }
+}
 /* About Section End */
 
 
@@ -442,7 +455,7 @@ div.container div.intro-text {
 }
 
 .project-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(image/intro-background.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) ,url(../image/intro-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -472,15 +485,15 @@ div.container div.intro-text {
 }
 
 .project-1 .image-holder .project-image {
-    background-image: url(image/project1.png);
+    background-image: url(../image/project1.png);
 }
 
 .project-2 .image-holder .project-image {
-    background-image: url(image/project2.png);
+    background-image: url(../image/project2.png);
 }
 
 .project-3 .image-holder .project-image {
-    background-image: url(image/project3.png);
+    background-image: url(../image/project3.png);
 } 
 
 .project-text {

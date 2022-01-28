@@ -26,6 +26,7 @@ a {
 
 .navbar-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 3%;
@@ -55,12 +56,54 @@ a {
     color: rgb(159, 202, 202);
     transform: scale(1.1);
 }
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease 0s;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+#hamburger:hover{
+    color: rgb(159, 202, 202);
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar-page-content {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar-page-content.show {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .navbar-page-content.show li{
+        margin: 5px;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
 /* Navbar Section End */
 
 
 
 /* Resume Section Start */
 .resume-container {
-    margin-top: 68.8px;
     padding: 5% 10% 0 10%;
 }
+/* Resume Section End */
+
