@@ -1,7 +1,7 @@
 // Source code reference link: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
 
 // List of sentences
-var _CONTENT = [ 
+const _CONTENT = [ 
 	"Aalto University", 
 	"Digital Systems and Design", 
 	"Software Engineering", 
@@ -9,32 +9,26 @@ var _CONTENT = [
 ];
 
 // Current sentence being processed
-var _PART = 0;
+let _PART = 0;
 
 // Character number of the current sentence being processed 
-var _PART_INDEX = 0;
+let _PART_INDEX = 0;
 
 // Holds the handle returned from setInterval
-var _INTERVAL_VAL;
+let _INTERVAL_VAL;
 
 // Element that holds the text
-var _ELEMENT = document.querySelector("#intro-text");
-
-// // Cursor element 
-// var _CURSOR = document.querySelector("#intro-cursor");
+let _ELEMENT = document.querySelector("#intro-text");
 
 // Implements typing effect
 function Type() { 
 	// Get substring with 1 characater added
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	let text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
 	_ELEMENT.innerHTML = text;
 	_PART_INDEX++;
 
 	// If full sentence has been displayed then start to delete the sentence after some time
 	if(text === _CONTENT[_PART]) {
-		// Hide the cursor
-		// _CURSOR.style.display = 'none';
-
 		clearInterval(_INTERVAL_VAL);
 		setTimeout(function() {
 			_INTERVAL_VAL = setInterval(Delete, 50);
@@ -45,7 +39,7 @@ function Type() {
 // Implements deleting effect
 function Delete() {
 	// Get substring with 1 characater deleted
-	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	let text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
 	_ELEMENT.innerHTML = text;
 	_PART_INDEX--;
 
@@ -63,7 +57,6 @@ function Delete() {
 
 		// Start to display the next sentence after some time
 		setTimeout(function() {
-			// _CURSOR.style.display = 'inline-block';
 			_INTERVAL_VAL = setInterval(Type, 100);
 		}, 200);
 	}
